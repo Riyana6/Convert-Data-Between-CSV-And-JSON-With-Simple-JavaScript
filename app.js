@@ -47,23 +47,21 @@ const FileSystem = require("fs");
     
 })();*/
 
-// require json-2-csv module
-
-
 // read JSON from a file
-
 const source = JSON.parse(FileSystem.readFileSync('users.json'));
 
-// convert JSON array to CSV string
-JSONToCSV(source, (err, csv) => {
-    if (err) {
-        throw err;
+//******* */ convert JSON array to CSV string
+(async () => {
+    try {
+        const csv = JSONToCSV(source);
+
+        // print CSV string
+        //console.log(csv);
+
+        // write CSV to a file
+        FileSystem.writeFileSync('users.csv', csv);
+
+    } catch (err) {
+        console.log(err);
     }
-
-    // print CSV string
-    console.log(csv);
-
-    // write CSV to a file
-    FileSystem.writeFileSync('users.csv', csv);
-    
-});
+})();
