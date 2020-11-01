@@ -27,8 +27,8 @@ const FileSystem = require("fs");
 
 // require csvtojson module
 
-// convert users.csv file to JSON array
-(async () => {
+// *******convert users.csv file to JSON array
+/*(async () => {
     try {
         const users = await CSVToJSON().fromFile('NAT64_1_20.csv');
 
@@ -45,4 +45,25 @@ const FileSystem = require("fs");
         console.log(err);
     }
     
-})();
+})();*/
+
+// require json-2-csv module
+
+
+// read JSON from a file
+
+const source = JSON.parse(FileSystem.readFileSync('users.json'));
+
+// convert JSON array to CSV string
+JSONToCSV(source, (err, csv) => {
+    if (err) {
+        throw err;
+    }
+
+    // print CSV string
+    console.log(csv);
+
+    // write CSV to a file
+    FileSystem.writeFileSync('users.csv', csv);
+    
+});
