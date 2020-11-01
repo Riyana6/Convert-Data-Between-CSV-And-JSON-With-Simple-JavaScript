@@ -50,7 +50,7 @@ const FileSystem = require("fs");
 // read JSON from a file
 //******* */ convert JSON array to CSV string
 
-/*
+
 const source = JSON.parse(FileSystem.readFileSync('users.json'));
 
 
@@ -62,10 +62,9 @@ const source = JSON.parse(FileSystem.readFileSync('users.json'));
         //console.log(csv);
 
         // write CSV to a file
-        FileSystem.writeFileSync('users.csv', csv);
+        FileSystem.writeFileSync('user.csv', csv);
 
     } catch (err) {
         console.log(err);
     }
 })();
-*/
