@@ -32,7 +32,6 @@ function createCsv() {
 }
 
 
-...
 
 //in your render method you will have something like
 {
@@ -47,4 +46,4 @@ function createCsv() {
 function saveAsCsv() {
     saveAs(csvForExportFileURL, 'ella_all_answers.csv')
 }
-view rawsave_as_csv.js hosted with ❤ by GitHub
+export default App;
