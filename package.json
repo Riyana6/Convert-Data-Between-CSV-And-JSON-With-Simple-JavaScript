@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Riyana6/Convert-Data-Between-CSV-And-JSON-With-Simple-JavaScript#readme",
   "dependencies": {
     "csvtojson": "^2.0.10",
+    "file-save": "^0.2.0",
     "json2csv": "^5.0.3"
   }
 }
