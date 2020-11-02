@@ -1,0 +1,15 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  th,
+  td {
+    background: silver;
+    padding: 10px;
+  }
+  
+  p {
+    text-align: left;
+  }
+  
